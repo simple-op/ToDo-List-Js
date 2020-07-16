@@ -3,9 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title><%=title%></title>
 </head>
 <body>
     
+<div id="container" >
+  
+    <form action="/create" method="POST" >
+    <input  name="task" type="text">
+    <input type="date" name="date" >
+    <select name="category" id="" >
+         <!-- <option value="" placeholder="Select a Category "></option> -->
+        <option >Personal</option>
+        <option >Offical</option>
+        <option >Personal</option>
+        <option >Personal</option>
+        <option >Personal</option>
+        <option >Personal</option>
+
+        
+    </select>
+    <input type="submit"  value="Add">
+    
+    
+    </form>
+    <form action="/delete" method="post">
+    <input type="submit" value="Delete">
+
+    <ul><% let count=0 %>
+        <% for (let i of tasks) {%> 
+            <%count++%>
+           
+          <li><input type="checkbox" name="check" value=<%=i._id%>>
+          <div><%=i.task%></div>
+
+          <div><%=i.date%> </div>
+          <div><%=i.category%></div>
+        </li>
+   <%}%>
+     <div><%=count%> Tasks Pending</div>
+    </form>
+    </ul>
+</div>
+
 </body>
 </html>

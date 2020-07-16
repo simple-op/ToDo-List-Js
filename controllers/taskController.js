@@ -1,15 +1,27 @@
-const expres=require('express');
-const mongoose=require('mongoose');
+// const expres=require('express');
+// const mongoose=require('mongoose');
 // const ejs=require('ejs');
-const app=expres();
+// const app=expres();
+
+const task=require("../models/taskList");
+const router = require("../routes/homeRoute");
+// const { urlencoded } = require('express');
 
 
 
 let taskController=function(req,res){
-    res.render("home",{
-        title:"Todo List"
-    });
+   console.log(req);
+
+   task.create({
+       task:req.body.task,
+       date:req.body.date,
+       category:req.body.category,
+       completed:false
+   });
+   res.redirect("/")
 }
+
+
 
 
 module.exports=taskController;
