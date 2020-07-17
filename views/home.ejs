@@ -9,42 +9,59 @@
 <body>
     
 <div id="container" >
-  
+    <div><h1><%=title%></h1></div> 
+    <div class="labels">
+        <div>Enter Task</div>
+        <div>Due Date</div>
+        <div>Choose Category</div>
+    </div>
     <form action="/create" method="POST" >
-    <input  name="task" type="text">
-    <input type="date" name="date" >
-    <select name="category" id="" >
+    <input class="input task" name="task" type="text" placeholder="Add New Task" required>
+    <input class="input" type="date" name="date" required>
+    <select class="input select" name="category" id="" required>
          <!-- <option value="" placeholder="Select a Category "></option> -->
         <option >Personal</option>
         <option >Offical</option>
-        <option >Personal</option>
-        <option >Personal</option>
-        <option >Personal</option>
-        <option >Personal</option>
+        <option >School</option>
+        <option >Cleaning</option>
+        <option >Other</option>
+        <!-- <option >Personal</option> -->
 
         
     </select>
-    <input type="submit"  value="Add">
+    <input  class="button add" type="submit"  value="Add">
     
     
     </form>
     <form action="/delete" method="post">
-    <input type="submit" value="Delete">
+    <input class="button delete" type="submit" value="Delete">
 
+   
+    
     <ul><% let count=0 %>
+        <div id="list_columns">
+            <div>Status</div>
+            <div id="task">Tasks</div>
+
+            <div>Due Date</div>
+            <div >Type</div> 
+        </div>
+        
+        
         <% for (let i of tasks) {%> 
             <%count++%>
            
           <li><input type="checkbox" name="check" value=<%=i._id%>>
-          <div><%=i.task%></div>
+          <div id="task"><%=i.task%></div>
 
-          <div><%=i.date%> </div>
-          <div><%=i.category%></div>
+          <div id="date"><%=i.date%> </div>
+          <div id="category"><%=i.category%></div>
         </li>
    <%}%>
-     <div><%=count%> Tasks Pending</div>
     </form>
     </ul>
+
+    <div id="counter"><%=count%> Tasks Pending</div>
 </div>
 
 </body>

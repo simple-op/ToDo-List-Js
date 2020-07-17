@@ -1,33 +1,194 @@
+body{
+    /* background-color: darkblue; */
+}
 #container{
     margin: auto;
-    width: 40vw;
-    border: solid;
-}
-input{
-    padding: 10px;
-    font-family: sans-serif;
-font-size: bold;
-font-weight: bold;
-}
-
-select{
-    padding: 10px;
-    font-family: sans-serif;
-font-size: bold;
-font-weight: bold;
-}
-input:checked ~div{
-    text-decoration: line-through;
-
+    width: 50vw;
+    /* border: solid; */
+    box-shadow: 0 0 10px 10px black ;
     
 }
 
+h1{
+    text-align: center;
+    text-shadow: 0 10px 10px dimgray ;
+    font-size: xx-large;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+    color: crimson;
+
+
+}
+.input{
+    /* width: 40%; */
+    height: 50px;
+    width: 30%;
+    border: none;
+    /* background-color:lightgray; */
+    outline: none;
+    margin: 0;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: larger;
+    font-size: bold;
+    font-weight: bold;
+}
+.task{
+    background-color: lightgray;
+}
+.labels{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    /* border-bottom:1px solid ; */
+    font-family: sans-serif;
+
+    
+}
+.button{
+
+    width: 100%;
+    background-color: white;
+    
+   
+    padding: 10px;
+    height: auto;
+    
+    font-size: x-large;
+    border: none;
+    outline: none;
+    margin: 1px;
+}
+
+.button:hover{
+    cursor: pointer;
+    
+    color: white;
+
+}
+
+.add{
+    /* color: dodgerblue; */
+    background-color: dodgerblue;
+    /* border-radius: 20px; */
+    color: white;
+
+    
+    
+
+}
+.add:hover{
+    background-color: white;
+    color: red;
+}
+
+.delete{
+    /* color: red; */
+    background-color: red;
+    /* border-radius: 20px; */
+    color: white;
+    
+
+}
+
+.delete:hover{
+
+    background-color: white;
+    color: red;
+}
+
+
+.select{
+    
+    /* height: 40px; */
+    height: 70px;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: bold;
+    font-weight: bold;
+}
+input:checked ~#task{
+    text-decoration: line-through;
+    filter: blur(10px);
+    
+    
+}
+
+li:nth-child(2n+1){
+    background-color: cyan;
+    color: white;
+}
+
+
 li{
-    background-color: black;
-    color: antiquewhite;
+    background-color: lightcyan;
+    color: black;
+    
+
 }
 
 ul{
     padding-inline-start: 0;
     list-style: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-family: sans-serif;
 }
+
+li {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    font-size: large;
+    font-weight: bold;
+    justify-content: space-between;
+    text-align: left;
+    /* flex-grow: 1; */
+    margin: 1px;
+    /* border-radius:50px ; */
+    
+
+
+    
+}
+#counter{
+    background-color: red;
+    font-size: x-large;
+    padding: 10px;
+    color: white;
+    /* border-radius:20px ; */
+}
+
+#category{
+    background-color: black;
+    color: white;
+    padding:10px;
+    width: 80px;
+    height:20px;
+    /* border-radius:20px ; */
+}
+
+#list_columns{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    font-size: large;
+    font-weight: bold;
+    justify-content: space-between;
+    background-color: dodgerblue;
+    padding-right: 50px;
+    /* border-radius: 20px; */
+
+
+}
+
+#task{
+  width: 25%;
+  overflow: hidden;
+  background-color: transparent;
+  /* word-break: break-all; */
+}
+

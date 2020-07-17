@@ -10,7 +10,7 @@ const router = require("../routes/homeRoute");
 
 
 let taskController=function(req,res){
-   console.log(req);
+//    console.log(req);
 
    task.create({
        task:req.body.task,

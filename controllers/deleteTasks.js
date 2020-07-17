@@ -16,7 +16,7 @@ if(req.body.check)   {
       
     })}}
     res.redirect("/");
-    console.log(req.body);
+   //  console.log(req.body);
 
  }
 
