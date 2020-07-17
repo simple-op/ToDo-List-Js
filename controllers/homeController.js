@@ -16,7 +16,7 @@ let homeController=function(req,res){
       }
          else{
             res.render("home",{
-                title:"Todo List",
+                title:"Todo App", 
                 tasks:object
             });
          }

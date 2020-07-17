@@ -1,15 +1,23 @@
 body{
-    /* background-color: darkblue; */
+    background-color:dodgerblue;
+    
+
 }
 #container{
     margin: auto;
     width: 50vw;
     /* border: solid; */
     box-shadow: 0 0 10px 10px black ;
+    background-color: white;
+    overflow: hidden;
+
     
 }
 
+
 h1{
+    padding-top: 50px;
+    /* border-bottom: solid black; */
     text-align: center;
     text-shadow: 0 10px 10px dimgray ;
     font-size: xx-large;
@@ -32,11 +40,33 @@ h1{
     font-size: larger;
     font-size: bold;
     font-weight: bold;
+    background-color: transparent;
+    
+}
+#status{
+    transform: scale(1.5);
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: lightgray;
+
+}
+.duedate{
+   border-right: solid;
+   border-left: solid;
+}
+
+#form{
+
+    background-color: lightgray;
 }
 .task{
     background-color: lightgray;
 }
 .labels{
+    border-top: solid;
+    border-bottom: solid;
+    /* background-color: aqua; */
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -45,6 +75,7 @@ h1{
     font-weight: bold;
     /* border-bottom:1px solid ; */
     font-family: sans-serif;
+    padding: 10px;
 
     
 }
@@ -72,32 +103,45 @@ h1{
 
 .add{
     /* color: dodgerblue; */
-    background-color: dodgerblue;
-    /* border-radius: 20px; */
-    color: white;
-
+  
+    background-color: white;
+    color: green;
+    border-top: solid green;
+    border-bottom: solid green;
+    font-weight: bold;
+    
+    
     
     
 
 }
 .add:hover{
-    background-color: white;
-    color: red;
+    background-color: green;
+    /* border-radius: 20px; */
+    color: white;
 }
 
 .delete{
     /* color: red; */
-    background-color: red;
-    /* border-radius: 20px; */
-    color: white;
+    background-color: white;
+    color: red;
+    border-top: solid red;
+    border-bottom: solid red;
+    font-weight: bold;
+
+
     
 
 }
 
 .delete:hover{
 
-    background-color: white;
-    color: red;
+   
+    background-color: red;
+    /* border-radius: 20px; */
+    color: white;
+    font-weight: bold;
+
 }
 
 
@@ -112,19 +156,21 @@ h1{
 }
 input:checked ~#task{
     text-decoration: line-through;
-    filter: blur(10px);
+    filter: blur(2px);
     
     
 }
 
 li:nth-child(2n+1){
-    background-color: cyan;
+    background-color: dodgerblue;
     color: white;
+
 }
 
 
 li{
-    background-color: lightcyan;
+    background-color:lightblue;
+
     color: black;
     
 
@@ -155,10 +201,16 @@ li {
     
 }
 #counter{
+    width: 100%;
     background-color: red;
     font-size: x-large;
     padding: 10px;
     color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-weight: bold;
     /* border-radius:20px ; */
 }
 

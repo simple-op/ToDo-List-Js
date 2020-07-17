@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <title><%=title%></title>
 </head>
 <body>
@@ -11,14 +12,16 @@
 <div id="container" >
     <div><h1><%=title%></h1></div> 
     <div class="labels">
-        <div>Enter Task</div>
+        <div>Task</div>
         <div>Due Date</div>
         <div>Choose Category</div>
     </div>
     <form action="/create" method="POST" >
-    <input class="input task" name="task" type="text" placeholder="Add New Task" required>
-    <input class="input" type="date" name="date" required>
-    <select class="input select" name="category" id="" required>
+        <div id="form">  
+            <input class="input task" name="task" type="text" placeholder="Enter A New Task" required>
+            <input class="input duedate" type="date" name="date" required>
+            <select class="input select" name="category" id="" required></div>
+  
          <!-- <option value="" placeholder="Select a Category "></option> -->
         <option >Personal</option>
         <option >Offical</option>
@@ -51,10 +54,10 @@
         <% for (let i of tasks) {%> 
             <%count++%>
            
-          <li><input type="checkbox" name="check" value=<%=i._id%>>
+          <li><input id="status" type="checkbox" name="check" value=<%=i._id%>>
           <div id="task"><%=i.task%></div>
 
-          <div id="date"><%=i.date%> </div>
+          <div id="date"><i class="	far fa-calendar-alt" aria-hidden="true"></i> <%=i.date%>  </div>
           <div id="category"><%=i.category%></div>
         </li>
    <%}%>
@@ -65,4 +68,4 @@
 </div>
 
 </body>
-</html>
+</html> 
