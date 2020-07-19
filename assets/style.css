@@ -1,8 +1,10 @@
+/* setting the body background color */
 body{
     background-color:dodgerblue;
     
 
 }
+/* main div containg allo elements */
 #container{
     margin: auto;
     width: 50vw;
@@ -10,11 +12,11 @@ body{
     box-shadow: 0 0 10px 10px black ;
     background-color: white;
     overflow: hidden;
-
+    margin-bottom: 50px;
     
 }
 
-
+/* heading styling */
 h1{
     padding-top: 50px;
     /* border-bottom: solid black; */
@@ -27,6 +29,7 @@ h1{
 
 
 }
+/* .input class for all input fields */
 .input{
     /* width: 40%; */
     height: 50px;
@@ -43,6 +46,7 @@ h1{
     background-color: transparent;
     
 }
+/* checkbox sizing */
 #status{
     transform: scale(1.5);
     border: none;
@@ -51,11 +55,13 @@ h1{
     background-color: lightgray;
 
 }
+/* .duedate class for date input field */
 .duedate{
    border-right: solid;
    border-left: solid;
 }
 
+/* form  id for div inside  form */
 #form{
 
     background-color: lightgray;
@@ -63,6 +69,7 @@ h1{
 .task{
     background-color: lightgray;
 }
+/* these are labels for every input field setting their border solid  */
 .labels{
     border-top: solid;
     border-bottom: solid;
@@ -79,6 +86,7 @@ h1{
 
     
 }
+/* .button class for delete and add button  */
 .button{
 
     width: 100%;
@@ -93,7 +101,7 @@ h1{
     outline: none;
     margin: 1px;
 }
-
+/* onhover changing cursor to pointer */
 .button:hover{
     cursor: pointer;
     
@@ -115,12 +123,14 @@ h1{
     
 
 }
+/* onhover changing cursor to pointer */
+
 .add:hover{
     background-color: green;
     /* border-radius: 20px; */
     color: white;
 }
-
+/* .delete class for delete button */
 .delete{
     /* color: red; */
     background-color: white;
@@ -133,6 +143,7 @@ h1{
     
 
 }
+/* onhover changing cursor to pointer */
 
 .delete:hover{
 
@@ -144,7 +155,7 @@ h1{
 
 }
 
-
+/* drop down menu styling setting font size larger */
 .select{
     
     /* height: 40px; */
@@ -154,19 +165,21 @@ h1{
     font-size: bold;
     font-weight: bold;
 }
+/* while checked put a line through its lower sibling div */
 input:checked ~#task{
     text-decoration: line-through;
     filter: blur(2px);
     
     
 }
-
+/* alternate liost items with dogerblue color */
 li:nth-child(2n+1){
     background-color: dodgerblue;
     color: white;
 
 }
 
+/* alternate liost items with lightblue color */
 
 li{
     background-color:lightblue;
@@ -175,7 +188,7 @@ li{
     
 
 }
-
+/* list css settings removing disk styling  */
 ul{
     padding-inline-start: 0;
     list-style: none;
@@ -200,6 +213,7 @@ li {
 
     
 }
+/* the task counter how many are pending its postion is fixed at botttom */
 #counter{
     width: 100%;
     background-color: red;
@@ -207,13 +221,13 @@ li {
     padding: 10px;
     color: white;
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 0;
     text-align: center;
     font-weight: bold;
     /* border-radius:20px ; */
 }
-
+/* this is category div putting backgroud color black */
 #category{
     background-color: black;
     color: white;
@@ -236,7 +250,7 @@ li {
 
 
 }
-
+/* task discription styling */
 #task{
   width: 25%;
   overflow: hidden;

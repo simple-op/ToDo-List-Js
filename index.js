@@ -10,6 +10,7 @@ const db=require("./config/mongoose");
 const port=9000;
 // calling the express function
 const app=express();
+// using middleware to oarse the url sent through the form
 app.use(express.urlencoded());
 
 // require the view engine in our case its ejs

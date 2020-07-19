@@ -1,5 +1,5 @@
 const mongoose=require('mongoose');
-
+// setting mongoose schema
 const schema=new mongoose.Schema({
      task:{
          type:String,
@@ -22,6 +22,6 @@ const schema=new mongoose.Schema({
 
 
 })
-
+// craeting table/model  in mongoose
 let task=mongoose.model('TaskList',schema);
 module.exports=task;

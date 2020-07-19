@@ -8,10 +8,10 @@ const router = require("../routes/homeRoute");
 // const { urlencoded } = require('express');
 
 
-
+// taskcontroller function 
 let taskController=function(req,res){
 //    console.log(req);
-
+// creating task with the following values 
    task.create({
        task:req.body.task,
        date:req.body.date,
@@ -23,5 +23,5 @@ let taskController=function(req,res){
 
 
 
-
+// expoprting taskController
 module.exports=taskController;

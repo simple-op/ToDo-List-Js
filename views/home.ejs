@@ -12,10 +12,12 @@
 <div id="container" >
     <div><h1><%=title%></h1></div> 
     <div class="labels">
+        <!-- labels for input fields -->
         <div>Task</div>
         <div>Due Date</div>
         <div>Choose Category</div>
     </div>
+    <!-- form with the post method on /create -->
     <form action="/create" method="POST" >
         <div id="form">  
             <input class="input task" name="task" type="text" placeholder="Enter A New Task" required>
@@ -23,6 +25,7 @@
             <select class="input select" name="category" id="" required></div>
   
          <!-- <option value="" placeholder="Select a Category "></option> -->
+         <!-- option avail on click on drop down menu  -->
         <option >Personal</option>
         <option >Offical</option>
         <option >School</option>
@@ -32,6 +35,7 @@
 
         
     </select>
+    <!-- add button -->
     <input  class="button add" type="submit"  value="Add">
     
     
@@ -40,7 +44,7 @@
     <input class="button delete" type="submit" value="Delete">
 
    
-    
+    <!-- initializing the countyer variable  -->
     <ul><% let count=0 %>
         <div id="list_columns">
             <div>Status</div>
@@ -50,7 +54,7 @@
             <div >Type</div> 
         </div>
         
-        
+        <!-- itirating over  all the tasks to render on home -->
         <% for (let i of tasks) {%> 
             <%count++%>
            
@@ -63,7 +67,7 @@
    <%}%>
     </form>
     </ul>
-
+<!-- fixed counter div we have at bottom -->
     <div id="counter"><%=count%> Tasks Pending</div>
 </div>
 
