@@ -262,7 +262,7 @@ li {
 @media screen and (max-width:780px) {
    
       #container{
-          width: 98vw;
+          width: 100vw;
           margin: 0px;
           font-size: xx-small;
           
