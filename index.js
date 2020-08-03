@@ -7,7 +7,7 @@ const db=require("./config/mongoose");
 
 
 //setting up the port at which server will be running
-const port=9000;
+const port=process.env.PORT||9000;
 // calling the express function
 const app=express();
 // using middleware to oarse the url sent through the form
