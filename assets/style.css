@@ -270,6 +270,7 @@ li {
       body{
           padding: 0;
           font-size: xx-small;
+          margin: 0;
       }
       #list_columns{
           font-size: small;
