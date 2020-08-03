@@ -264,9 +264,20 @@ li {
       #container{
           width: 98vw;
           margin: 0px;
+          font-size: xx-small;
           
       }
       body{
           padding: 0;
+          font-size: xx-small;
+      }
+      #list_columns{
+          font-size: small;
+      }
+      li{
+          font-size: small;
+      }
+      .input{
+          width: 28%;
       }
     }
